@@ -34,6 +34,7 @@ void	lst_pop(t_list *node)
 {
 	if (node->data)
 	{
+		--*node->size;
 		node->prev->next = node->next;
 		node->next->prev = node->prev;
 		if (node->destructor)
