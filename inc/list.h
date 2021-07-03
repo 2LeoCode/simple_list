@@ -20,7 +20,9 @@ typedef struct s_list
 }	t_list;
 
 void	lst_clear(t_list *sentinel);
+void	lst_safe_clear(t_list *sentinel);
 void	lst_destroy(void *sentinel);
+void	lst_safe_destroy(t_list *sentinel);
 int		lst_failure(t_list *sentinel, void *cur_data,
 			t_destructor cur_destructor);
 
